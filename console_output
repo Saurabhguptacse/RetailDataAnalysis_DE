@@ -1,0 +1,157 @@
+root
+ |-- key: binary (nullable = true)
+ |-- value: binary (nullable = true)
+ |-- topic: string (nullable = true)
+ |-- partition: integer (nullable = true)
+ |-- offset: long (nullable = true)
+ |-- timestamp: timestamp (nullable = true)
+ |-- timestampType: integer (nullable = true)
+
+root
+ |-- value: string (nullable = true)
+
+root
+ |-- data: struct (nullable = true)
+ |    |-- invoice_no: string (nullable = true)
+ |    |-- country: string (nullable = true)
+ |    |-- timestamp: timestamp (nullable = true)
+ |    |-- type: string (nullable = true)
+ |    |-- items: array (nullable = true)
+ |    |    |-- element: struct (containsNull = true)
+ |    |    |    |-- SKU: string (nullable = true)
+ |    |    |    |-- title: string (nullable = true)
+ |    |    |    |-- unit_price: double (nullable = true)
+ |    |    |    |-- quantity: integer (nullable = true)
+
+root
+ |-- invoice_no: string (nullable = true)
+ |-- country: string (nullable = true)
+ |-- timestamp: timestamp (nullable = true)
+ |-- SKU: string (nullable = true)
+ |-- title: string (nullable = true)
+ |-- unit_price: double (nullable = true)
+ |-- quantity: integer (nullable = true)
+ |-- total_cost: double (nullable = true)
+ |-- is_order: integer (nullable = true)
+ |-- is_return: integer (nullable = true)
+
+root
+ |-- time: struct (nullable = false)
+ |    |-- start: timestamp (nullable = true)
+ |    |-- end: timestamp (nullable = true)
+ |-- OPM: long (nullable = false)
+ |-- total_sale_volume: string (nullable = true)
+ |-- average_transaction_size: string (nullable = true)
+ |-- rate_of_return: string (nullable = true)
+
+root
+ |-- time: struct (nullable = false)
+ |    |-- start: timestamp (nullable = true)
+ |    |-- end: timestamp (nullable = true)
+ |-- OPM: long (nullable = false)
+ |-- total_sale_volume: string (nullable = true)
+ |-- rate_of_return: string (nullable = true)
+
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++---------------+--------------+-------------------+------------------+-----------+
+|     invoice_no|       country|          timestamp|        total_cost|total_items|
++---------------+--------------+-------------------+------------------+-----------+
+|154132548888417|United Kingdom|2022-04-07 16:21:01| 85.63000000000001|         31|
+|154132548888495|United Kingdom|2022-04-07 16:27:56|             75.51|         47|
+|154132548888515|United Kingdom|2022-04-07 16:30:18|             50.66|         21|
+|154132548888674|United Kingdom|2022-04-07 16:47:07|27.169999999999998|         11|
+|154132548888754|United Kingdom|2022-04-07 16:53:20|             82.74|         26|
+|154132548888965|United Kingdom|2022-04-07 17:12:52|10.350000000000001|          3|
+|154132548889199|United Kingdom|2022-04-07 17:34:11|              4.55|          3|
+|154132548889655|United Kingdom|2022-04-07 18:20:28|              4.55|          3|
+|154132548889898|United Kingdom|2022-04-07 18:45:05|             19.45|         11|
+|154132548890203|United Kingdom|2022-04-07 19:17:43|             128.7|         72|
+|154132548890772|United Kingdom|2022-04-07 20:16:19|              0.42|          1|
+|154132548890856|United Kingdom|2022-04-07 20:24:59|              10.2|         12|
+|154132548890877|United Kingdom|2022-04-07 20:26:56|             29.52|         12|
+|154132548891395|United Kingdom|2022-04-07 21:21:39|             37.43|         33|
+|154132548891450|United Kingdom|2022-04-07 21:27:57|              4.96|          4|
+|154132548891559|        France|2022-04-07 21:39:23|            198.24|         48|
+|154132548891605|United Kingdom|2022-04-07 21:42:51| 60.10999999999999|         27|
+|154132548891711|United Kingdom|2022-04-07 21:52:00|             87.31|         46|
+|154132548892312|United Kingdom|2022-04-07 22:46:28|              41.6|         20|
+|154132548892321|United Kingdom|2022-04-07 22:47:15|              9.78|          6|
++---------------+--------------+-------------------+------------------+-----------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++---------------+--------------+-------------------+------------------+-----------+
+|     invoice_no|       country|          timestamp|        total_cost|total_items|
++---------------+--------------+-------------------+------------------+-----------+
+|154132548973410|United Kingdom|2022-04-13 12:36:55|49.910000000000004|         48|
+|154132548973415|United Kingdom|2022-04-13 12:37:23|450.69000000000005|        479|
+|154132548973411|United Kingdom|2022-04-13 12:37:06|            279.56|         38|
+|154132548973416|United Kingdom|2022-04-13 12:37:23|             57.09|         12|
+|154132548973417|United Kingdom|2022-04-13 12:37:28|              6.72|         16|
+|154132548973414|United Kingdom|2022-04-13 12:37:23|             29.49|         26|
+|154132548973412|United Kingdom|2022-04-13 12:37:11|              16.1|          7|
+|154132548973413|United Kingdom|2022-04-13 12:37:17|             58.34|         20|
++---------------+--------------+-------------------+------------------+-----------+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++---------------+--------------+-------------------+------------------+-----------+
+|     invoice_no|       country|          timestamp|        total_cost|total_items|
++---------------+--------------+-------------------+------------------+-----------+
+|154132548973418|United Kingdom|2022-04-13 12:38:26|              25.2|         24|
+|154132548973419|        Norway|2022-04-13 12:38:33|              53.0|         16|
+|154132548973421|United Kingdom|2022-04-13 12:38:39|              1.45|          1|
+|154132548973420|United Kingdom|2022-04-13 12:38:39|16.689999999999998|         21|
++---------------+--------------+-------------------+------------------+-----------+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++---------------+--------------+-------------------+------------------+-----------+
+|     invoice_no|       country|          timestamp|        total_cost|total_items|
++---------------+--------------+-------------------+------------------+-----------+
+|154132548973423|       Germany|2022-04-13 12:39:05|             20.64|         48|
+|154132548973425|United Kingdom|2022-04-13 12:39:27|             82.86|         15|
+|154132548973422|   Switzerland|2022-04-13 12:38:49|54.650000000000006|         25|
+|154132548973429|United Kingdom|2022-04-13 12:39:39|             24.78|          6|
+|154132548973430|United Kingdom|2022-04-13 12:39:39|            196.98|         42|
+|154132548973431|United Kingdom|2022-04-13 12:39:44|             14.12|          8|
+|154132548973427|        France|2022-04-13 12:39:34|              19.8|          4|
+|154132548973428|United Kingdom|2022-04-13 12:39:36|              5.37|          2|
+|154132548973424|United Kingdom|2022-04-13 12:39:24|              8.42|          2|
+|154132548973426|United Kingdom|2022-04-13 12:39:27|               6.6|          4|
++---------------+--------------+-------------------+------------------+-----------+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++---------------+--------------+-------------------+------------------+-----------+
+|     invoice_no|       country|          timestamp|        total_cost|total_items|
++---------------+--------------+-------------------+------------------+-----------+
+|154132548973438|United Kingdom|2022-04-13 12:40:29|              26.6|         12|
+|154132548973432|United Kingdom|2022-04-13 12:39:47|              79.5|         10|
+|154132548973439|United Kingdom|2022-04-13 12:40:32|             36.11|         14|
+|154132548973433|United Kingdom|2022-04-13 12:40:03|14.209999999999999|         13|
+|154132548973437|United Kingdom|2022-04-13 12:40:29|              16.5|          2|
+|154132548973440|United Kingdom|2022-04-13 12:40:36|             67.75|         17|
+|154132548973436|United Kingdom|2022-04-13 12:40:21|              1.63|          1|
+|154132548973435|United Kingdom|2022-04-13 12:40:19|             61.96|         13|
+|154132548973434|        Sweden|2022-04-13 12:40:12|              7.88|          4|
++---------------+--------------+-------------------+------------------+-----------+
+
+Traceback (most recent call last):
+  File "/home/hadoop/spark-streaming.py", line 148, in <module>
+    timeCountryQuery.awaitTermination()
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/sql/streaming.py", line 103, in awaitTermination
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1255, in __call__
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 985, in send_command
+  File "/usr/lib/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1152, in send_command
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/context.py", line 278, in signal_handler
+KeyboardInterrupt
